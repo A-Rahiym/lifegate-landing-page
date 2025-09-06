@@ -447,121 +447,124 @@ export default function LifeGateLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-teal-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <img
-                  src="/logo.svg"
-                  alt="LifeGate Logo"
-                  className="w-8 h-8"
-                />
-                <div className="flex flex-col ">
-                  <span className="text-0.75xl font-bold lowercase text-white">
-                    lifegate
-                  </span>
-                  <span className="text-xs text-teal-200 -mt-1 lowercase">
-                    by dshub
-                  </span>
-                </div>
-              </div>
-              <p className="text-white text-sm lowercase">
-                www.lifegate.dshub.com.ng
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4 lowercase text-white">
-                quick links
-              </h4>
-              <ul className="space-y-2 text-sm text-white">
-                <li>
-                  <button
-                    onClick={() => scrollToSection("home")}
-                    className="hover:text-teal-200 transition-colors lowercase"
-                  >
-                    home
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("how-it-works")}
-                    className="hover:text-teal-200 transition-colors lowercase"
-                  >
-                    how it works
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("features")}
-                    className="hover:text-teal-200 transition-colors lowercase"
-                  >
-                    features
-                  </button>
-                </li>
-                <li>
-                  <a
-                    href="https://drive.google.com/file/d/1yLKAOGRPHzaeXXf53bYGXAqrqckUtbvf/view?usp=drivesdk" target="_blank"
-                    className="hover:text-teal-200 transition-colors lowercase"
-                  >
-                    privacy policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#" target="_blank"
-                    className="hover:text-teal-200 transition-colors lowercase"
-                  >
-                    terms of service
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4 lowercase text-white">
-                compliance & security
-              </h4>
-              <ul className="space-y-2 text-sm text-white">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4" />
-                  <span className="lowercase">ndpr compliant</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4" />
-                  <span className="lowercase">
-                    hipaa inspired data security
-                  </span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4" />
-                  <span className="lowercase">
-                    encrypted & confidential patient records
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4 lowercase text-white">
-                contact info
-              </h4>
-              <div className="space-y-2 text-sm text-white">
-                <p className="lowercase">
-                  no 3 macedo crescent malali gra kaduna
-                </p>
-                <p className="lowercase">dinsoft.dev@gmail.com</p>
-                <p>+2349013453490</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-teal-700 mt-6 pt-6 text-center text-sm text-white">
-            <p className="lowercase">© lifegate by dshub copyright 2025</p>
+<footer className="bg-teal-800 text-white py-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-4 gap-8">
+      
+      {/* Logo & Brand */}
+      <div>
+        <div className="flex items-center space-x-3 mb-4">
+          <img
+            src="/logo.svg"
+            alt="LifeGate Logo"
+            className="w-8 h-8"
+          />
+          <div className="flex flex-col">
+            <span className="text-base font-bold text-white">
+              LifeGate
+            </span>
+            <span className="text-xs text-teal-200 -mt-1">
+              by dshub
+            </span>
           </div>
         </div>
-      </footer>
+        <p className="text-white text-sm">
+          www.lifegate.dshub.com.ng
+        </p>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <h4 className="font-semibold mb-4 text-white">
+          Quick Links
+        </h4>
+        <ul className="space-y-2 text-sm text-white">
+          <li>
+            <button
+              onClick={() => scrollToSection("home")}
+              className="hover:text-teal-200 transition-colors"
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
+              className="hover:text-teal-200 transition-colors"
+            >
+              How It Works
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollToSection("features")}
+              className="hover:text-teal-200 transition-colors"
+            >
+              Features
+            </button>
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1yLKAOGRPHzaeXXf53bYGXAqrqckUtbvf/view?usp=drivesdk"
+              target="_blank"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Compliance & Security */}
+      <div>
+        <h4 className="font-semibold mb-4 text-white">
+          Compliance & Security
+        </h4>
+        <ul className="space-y-2 text-sm text-white">
+          <li className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4" />
+            <span>NDPR Compliant</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4" />
+            <span>HIPAA-Inspired Data Security</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4" />
+            <span>Encrypted & Confidential Patient Records</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Contact Info */}
+      <div>
+        <h4 className="font-semibold mb-4 text-white">
+          Contact Info
+        </h4>
+        <div className="space-y-2 text-sm text-white">
+          <p>No 3 Macedo Crescent, Malali GRA, Kaduna</p>
+          <p>dinsoft.dev@gmail.com</p>
+          <p>+234 901 345 3490</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Footer Bottom */}
+    <div className="border-t border-teal-700 mt-6 pt-6 text-center text-sm text-white">
+      <p>© LifeGate by dshub. Copyright 2025</p>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
