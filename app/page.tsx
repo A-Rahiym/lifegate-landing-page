@@ -48,7 +48,7 @@ export default function LifeGateLanding() {
                 <span className="text-xl font-bold text-gray-900">
                   LifeGate
                 </span>
-                <span className="text-xs text-gray-500 -mt-1">by dshub</span>
+                <span className="text-xs text-gray-500 -mt-1">by DsHub</span>
               </div>
             </div>
 
@@ -464,7 +464,7 @@ export default function LifeGateLanding() {
               LifeGate
             </span>
             <span className="text-xs text-teal-200 -mt-1">
-              by dshub
+              by DsHub
             </span>
           </div>
         </div>
