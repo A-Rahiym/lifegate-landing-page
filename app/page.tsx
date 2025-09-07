@@ -48,7 +48,7 @@ export default function LifeGateLanding() {
                 <span className="text-xl font-bold text-gray-900">
                   LifeGate
                 </span>
-                <span className="text-xs text-gray-500 -mt-1">by DsHub</span>
+                <span className="text-xs text-gray-500 -mt-1">by DSHub</span>
               </div>
             </div>
 
@@ -464,7 +464,7 @@ export default function LifeGateLanding() {
               LifeGate
             </span>
             <span className="text-xs text-teal-200 -mt-1">
-              by DsHub
+              by DSHub
             </span>
           </div>
         </div>
@@ -560,7 +560,7 @@ export default function LifeGateLanding() {
 
     {/* Footer Bottom */}
     <div className="border-t border-teal-700 mt-6 pt-6 text-center text-sm text-white">
-      <p>© LifeGate by dshub. Copyright 2025</p>
+      <p>© LifeGate by DSHub. Copyright 2025</p>
     </div>
   </div>
 </footer>
