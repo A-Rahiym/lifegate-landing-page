@@ -3,8 +3,7 @@ export const navItems = [
   { id: "features", label: "Features" },
   { id: "how-it-works", label: "How it works" },
   { id: "testimonials", label: "Testimonials" },
-  { id: "gallery", label: "LifeGate in the Field" },
-  { id: "contact", label: "Contact Us" }, // Add this so Footer also gets it
+  { id: "gallery", label: "LifeGate in the Field" }
 ];
 
 
