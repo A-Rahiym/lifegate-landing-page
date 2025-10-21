@@ -101,13 +101,13 @@ export const steps = [
       title: "Patient Care Tracking",
       description:
         "Stay up-to-date with every patient’s vitals, treatments, and progress – all in real time.",
-      icon: "/tracking.svg",
+      icon: "/Tracking.svg",
     },
     {
       title: "Smart Assistance For ICU Decisions",
       description:
         "Access intelligent insights that help doctors and nurses make better, faster decisions.",
-      icon: "/chatbot.svg",
+      icon: "/Chatbot.svg",
     },
     {
       title: "Tools for Every ICU Role",
