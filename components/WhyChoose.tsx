@@ -1,29 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { sectionVariants } from "@/components/utils/animations";
-
+import { reasons } from "./utils/Items";
 const WhyChoose = () => {
-  const reasons = [
-    {
-      title: "Patient Care Tracking",
-      description:
-        "Stay up-to-date with every patient’s vitals, treatments, and progress – all in real time.",
-      icon: "/tracking.svg",
-    },
-    {
-      title: "Smart Assistance For ICU Decisions",
-      description:
-        "Access intelligent insights that help doctors and nurses make better, faster decisions.",
-      icon: "/chatbot.svg",
-    },
-    {
-      title: "Tools for Every ICU Role",
-      description:
-        "Empower nurses, doctors, and managers with AI tools designed for their specific roles.",
-      icon: "/Stethescope.svg",
-    },
-  ];
-
   return (
     <motion.section
       id="why-choose"
