@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { navItems } from "@/components/utils/Items";
 
 interface HeaderProps {
   scrollToSection: (sectionId: string) => void;
@@ -7,15 +8,6 @@ interface HeaderProps {
 
 const Header = ({ scrollToSection }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "features", label: "Features" },
-    { id: "how-it-works", label: "How it works" },
-    { id: "testimonials", label: "Testimonials" },
-    { id: "gallery", label: "LifeGate in the Field" },
-  ];
-
   return (
     <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md text-[#034F4D] shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
@@ -59,7 +51,7 @@ const Header = ({ scrollToSection }: HeaderProps) => {
               e.preventDefault();
               scrollToSection("contact");
             }}
-            className="bg-[#087676] text-white px-6 py-2 rounded-md shadow hover:bg-[#00908F] transition-all duration-200 whitespace-nowrap font-quicksand font-medium"
+            className="bg-[#087676] text-white px-6 py-2 rounded-full shadow hover:bg-[#00908F] transition-all duration-200 whitespace-nowrap font-quicksand font-medium"
           >
             Contact Us
           </a>

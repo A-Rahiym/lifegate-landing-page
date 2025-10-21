@@ -5,25 +5,7 @@ import { sectionVariants, imageVariants } from "@/components/utils/animations";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-const galleryData = [
-  {
-    src: "/img1.jpg",
-    alt: "LifeGate dashboard showing real-time ICU vitals",
-    caption: "Real-time monitoring at Lagos General Hospital",
-  },
-  {
-    src: "/img1.jpg",
-    alt: "LifeGate team training nurses and doctors",
-    caption: "Staff training at Kaduna Medical Center",
-  },
-  {
-    src: "/img1.jpg",
-    alt: "Doctor using LifeGate to review patient data",
-    caption: "Enhancing care at Abuja Clinic",
-  },
-];
-
+import { galleryData } from "./utils/Items";
 
 export default function Gallery() {
   return (
@@ -39,8 +21,8 @@ export default function Gallery() {
       <div className="absolute inset-0 opacity-10 bg-[url('/object.png')] bg-cover bg-center mx-0"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#037F7D] mb-2">
-          LifeGate Impact Showcase
+        <h2 className="text-4xl lg:text-5xl font-bold text-center text-[#037F7D] mb-2">
+          LifeGate Impact <span className="text-[#00A6A3]">Showcase</span>
         </h2>
         <p className="italic text-gray-600 text-center mb-12 text-lg">
           Here’s LifeGate in Action
@@ -54,10 +36,15 @@ export default function Gallery() {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          navigation
+          navigation={false} // hide arrows if you want full autoplay feel
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop
+          autoplay={{
+            delay: 2500,              // how long each slide stays
+            disableOnInteraction: false, // keep sliding after user scrolls
+            pauseOnMouseEnter: false, // don't pause when hovering
+          }}
+          speed={1200} // smooth transition speed
+          loop={true}
           className="w-full"
         >
           {galleryData.map((item, index) => (

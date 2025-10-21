@@ -1,3 +1,4 @@
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface PreloaderProps {
@@ -6,18 +7,17 @@ interface PreloaderProps {
 }
 
 const Preloader: React.FC<PreloaderProps> = ({ isLoading, setIsLoading }) => {
-  const logoVariants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => ({
-      pathLength: 1,
-      opacity: 1,
-      transition: { pathLength: { type: "spring", duration: 1.5 }, opacity: { duration: 0.5, delay: 0.5 }, delay: i * 0.3 },
-    }),
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5, delay: 1.2 } },
+  // Animation variant for dots
+  const dotVariants = {
+    animate: {
+      y: [0, -10, 0], // vertical bounce
+      opacity: [0.3, 1, 0.3], // fade in/out
+      transition: {
+        duration: 0.6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -26,34 +26,34 @@ const Preloader: React.FC<PreloaderProps> = ({ isLoading, setIsLoading }) => {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed inset-0 bg-white flex items-center justify-center z-50"
+          transition={{ duration: 0.6 }}
           onAnimationComplete={() => !isLoading && setIsLoading(false)}
+          className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50"
         >
-          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" className="text-teal-500">
-            {/* Stethoscope shape */}
-            <motion.path
-              d="M80 120 Q90 100 100 120 Q110 100 120 120 L120 140 Q110 160 100 140 Q90 160 80 140 Z M100 80 Q110 60 120 80 L130 90 Q140 100 130 110"
-              stroke="currentColor"
-              strokeWidth="8"
-              variants={logoVariants}
-              custom={0}
-              initial="hidden"
-              animate="visible"
-            />
-            <motion.text
-              x="50"
-              y="160"
-              fontSize="20"
-              fontWeight="bold"
-              fill="currentColor"
-              variants={textVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              LifeGate
-            </motion.text>
-          </svg>
+          {/* Logo or text */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-[#00A6A3] mb-8"
+          >
+            LifeGate
+          </motion.h1>
+
+          {/* Three Dots Animation */}
+          <div className="flex space-x-3">
+            {[0, 1, 2].map((i) => (
+              <motion.span
+                key={i}
+                variants={dotVariants}
+                animate="animate"
+                transition={{
+                  delay: i * 0.2, // stagger each dot
+                }}
+                className="w-4 h-4 rounded-full bg-[#00A6A3]"
+              />
+            ))}
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

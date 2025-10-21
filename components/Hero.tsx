@@ -1,66 +1,84 @@
-import Image from "next/image";
+"use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { sectionVariants } from "@/components/utils/animations";
-
-const Hero = () => {
+export default function Hero() {
   return (
     <motion.section
       id="home"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+      animate="visible"
       variants={sectionVariants}
-      className="relative font-lexend bg-gradient-to-br from-[#E6F8F7] to-[#D9F3F2] overflow-hidden py-16 lg:py-24"
+      className="relative bg-gradient-to-br from-[#E6F8F7] to-[#D9F9F8] py-20 lg:py-28 overflow-hidden"
     >
-      {/* --- PNG Background Overlay --- */}
-      <div
-        className="absolute inset-0 bg-no-repeat  bg-center opacity-5 pointer-events-none"
-        style={{
-          backgroundImage: "url('/object.png')",
-        }}
-      />
+      <div className="absolute inset-0 opacity-5 bg-[url('/object.png')] bg-cover bg-center mx-0"></div>
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-12">
+        {/* Left: Text Section */}
+        <div className="text-center lg:text-left space-y-6 lg:w-1/2">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-teal-700 leading-tight"
+          >
+            Empowering Nurses, Doctors{" "}
+            <br className="hidden sm:block" />
+            <span className="text-[#00A6A3]">and ICU Managers</span>
+          </motion.h1>
 
-      {/* --- Hero Content --- */}
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
-        {/* --- Left Content --- */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#00A6A3] mb-4 leading-tight">
-            <span className="text-[#00A6A3]">Empowering Nurses, Doctors</span>{" "}
-            <br className="hidden md:block" />
-            and ICU Managers
-          </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-gray-700 text-base md:text-lg max-w-lg mx-auto lg:mx-0"
+          >
+            Harness real-time AI assistance to reduce medical errors, improve
+            patient care, streamline decisions, and save critical time.
+          </motion.p>
 
-          <p className="text-gray-700 text-base md:text-lg mb-8 leading-relaxed">
-            Harness real-time AI assistance to reduce medical errors, improve patient care,
-            streamline decisions, and save critical time.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-            <button className="bg-[#087676] text-white font-medium px-6 py-3 rounded-md shadow hover:bg-[#00908F] transition">
-              Request for a Demo
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+          >
+            <button className="px-6 py-3 bg-[#087676] text-white rounded-full font-semibold hover:bg-[#008b8a] transition">
+              Get Started
             </button>
-            <button className="border border-[#087676] text-[#087676] bg-white font-medium px-8 py-3 rounded-md hover:bg-[#E0F7F6] transition">
+            <button className="px-6 py-3 border-2 border-[#00A6A3] text-[#00A6A3] rounded-full font-semibold hover:bg-[#00A6A3] hover:text-white transition">
               Learn More
             </button>
-          </div>
+          </motion.div>
         </div>
 
-        {/* --- Right Image --- */}
-        <div className="lg:w-1/2 flex justify-center relative">
-          <div className="relative w-[85%] md:w-[90%] lg:w-full h-auto drop-shadow-xl z-10">
-            <Image
-              src="/product.png"
-              alt="LifeGate dashboard"
-              width={500}
-              height={400}
-              priority
-              className="w-full h-auto rounded-md"
-            />
-          </div>
-        </div>
+        {/* Right: Image Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, x: 60 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="lg:w-1/2 mb-10 lg:mb-0"
+        >
+          <Image
+            src="/product.png"
+            alt="ICU Monitoring Dashboard"
+            width={550}
+            height={400}
+            className="mx-auto"
+          />
+        </motion.div>
       </div>
+
+      {/* Floating shapes for subtle motion */}
+      <motion.div
+        className="absolute top-10 left-10 w-10 h-10 bg-[#00A6A3]/20 rounded-full"
+        animate={{ y: [0, 10, 0], x: [0, 5, 0] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-16 w-14 h-14 bg-[#00A6A3]/10 rounded-full"
+        animate={{ y: [0, -8, 0], x: [0, -6, 0] }}
+        transition={{ repeat: Infinity, duration: 5 }}
+      />
     </motion.section>
   );
-};
-
-export default Hero;
+}
