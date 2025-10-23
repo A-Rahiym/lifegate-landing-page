@@ -41,7 +41,7 @@ export default function LifeGateLanding() {
       <Features />
       <HowItWorks />
       <Testimonials />
-      <Gallery />
+      {/* <Gallery /> */}
       <Contact />
       <Footer scrollToSection={scrollToSection} />
     </div>
