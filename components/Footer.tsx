@@ -2,9 +2,13 @@
 import { motion } from "framer-motion";
 import { sectionVariants } from "@/components/utils/animations";
 import { MapPin, Globe } from "lucide-react";
-import { navItems } from "@/components/utils/Items"; // 
+import { navItems } from "@/components/utils/Items"; //
 
-const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
+const Footer = ({
+  scrollToSection,
+}: {
+  scrollToSection: (sectionId: string) => void;
+}) => {
   return (
     <motion.footer
       initial="hidden"
@@ -21,12 +25,19 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-              <p>No 3 Maccido Crescent Malali GRA<br />Kaduna</p>
+              <p>
+                No 3 Maccido Crescent Malali GRA
+                <br />
+                Kaduna
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <Globe className="w-5 h-5 flex-shrink-0" />
-              <a href="https://www.lifegate.dshub.com.ng" className="hover:underline">
-                www.lifegate.dshub.com.ng
+              <a
+                href="https://www.lifegate.dshub.com.ng"
+                className="hover:underline"
+              >
+                lifegate.dshub.com.ng
               </a>
             </div>
           </div>
@@ -63,7 +74,8 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
                 <span className="text-xl">🔒</span> HIPAA Inspired Data Security
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-xl">🔒</span> Encrypted & Confidential Patient Records
+                <span className="text-xl">🔒</span> Encrypted & Confidential
+                Patient Records
               </li>
             </ul>
           </div>
