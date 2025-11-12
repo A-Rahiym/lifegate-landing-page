@@ -1,14 +1,20 @@
 # Lifegate — Landing Page
 
-A Next.js landing page built with the App Router, Tailwind CSS and Framer Motion. Designed as a marketing/static site (client components + local assets). Includes example components such as `components/Hero.tsx` and `components/Gallery.tsx`.
+## About
 
-## Quick facts
+Lifegate is a healthcare technology platform that empowers nurses, doctors, and ICU managers with real-time AI assistance. The platform helps reduce medical errors, improve patient care, streamline clinical decisions, and save critical time in high-pressure medical environments.
+
+This repository contains the marketing landing page for Lifegate—a modern, responsive website showcasing the product and its impact.
+
+## Technology Stack
 
 - **Framework:** Next.js (app directory)
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
 - **Carousel:** Swiper
 - **Images:** next/image (local files in `public/`)
+
+This is a client-side focused marketing site with smooth animations, image galleries, and responsive design.
 
 ## Repo structure (high level)
 
